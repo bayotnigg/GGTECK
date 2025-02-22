@@ -28,6 +28,7 @@
 	/* border-radius sizes */
 	--smal-rounded: 0.5rem;
 	--rounded: 1rem;
+	--mid-rounded: 1.5rem;
 	--extra-rounded: 2rem;
 	--circle: 50%;
 
@@ -259,7 +260,7 @@ img {
 .container {
 	height: 63.1dvh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	gap: 1.5rem;
 }
@@ -276,16 +277,19 @@ img {
 }
 
 button {
-	background: white;
 	font-size: var(--mid);
+	background: none;
+	border: none;
 	cursor: pointer;
 	position: relative;
-	border-radius: var(--rounded);
-	border: none;
-	padding: var(--padding-regular);
-	text-shadow: -3px 3px var(--light-pink);
 	color: var(--primary);
 	transition: all 0.2s ease;
+}
+
+.button-container {
+	border-radius: var(--rounded);
+	padding: var(--padding-regular);
+	background-color: white;
 }
 
 button:hover {
@@ -295,12 +299,12 @@ button:hover {
 button::after {
 	content: "";
 	position: absolute;
-	height: calc(100% + 8px);
-	width: calc(100% + 8px);
-	border-radius: var(--rounded);
+	height: 100%;
+	width: 100%;
+	border-radius: var(--mid-rounded);
 	box-shadow: -10px 10px rgba(0, 0, 0, 0.1);
-	translate: -10.5rem -1.3rem;
-	padding: var(--padding-size-reserve);
+	translate: -5.85rem -3.45rem;
+	padding: var(--padding-small);
 	background-image: conic-gradient(
 		from var(--angle),
 		var(--color-first),
@@ -319,7 +323,22 @@ button::after {
 	background-image: linear-gradient(var(--accent), var(--primary));
 }
 
+/* next section */
+
+.title-hold {
+	text-align: center;
+	padding: var(--padding-large);
+	font-family: "Avigea";
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
 section {
-	background-image: linear-gradient(var(--primary), var(--accent));
+	background-image: linear-gradient(var(--primary), var(--light-green));
 	height: 100dvh;
+}
+
+.title.montserrat-bold-italic {
+	width: 50%;
+	text-shadow: 0 7px #fbc1fb;
 }
