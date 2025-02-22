@@ -1,0 +1,57 @@
+/* Rotating */
+.anim.bob {
+	animation: Bobbing 1.5s ease-in-out infinite;
+}
+
+.anim.rotate {
+	animation: rotate 20s linear infinite;
+	transform-origin: center;
+	overflow: hidden;
+}
+
+.anim.pulse::before {
+	animation: pulse 2s linear infinite;
+}
+
+/* KFs */
+@keyframes Bobbing {
+	from {
+		transform: translateY(2px);
+	}
+	50% {
+		transform: translateY(-2px);
+	}
+	to {
+		transform: translateY(2px);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+
+@keyframes pulse {
+	from,
+	to {
+		opacity: 50%;
+	}
+
+	50% {
+		opacity: 90%;
+	}
+}
