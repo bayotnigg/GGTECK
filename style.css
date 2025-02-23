@@ -44,6 +44,19 @@
 	--padding-maybe: 4.5rem;
 	--padding-massive: 6.125rem;
 
+	/* negative paddings */
+
+	--padding-small-negative: -0.5rem;
+	--padding-regular-negative: -0.75rem;
+	--padding-normal-negative: -0.95rem;
+	--padding-negative: -1rem;
+	--padding-mid-negative: -1.25rem;
+	--padding-medium-negative: -1.5rem;
+	--padding-semilarge-negative: -2rem;
+	--padding-large-negative: -3.45rem;
+	--padding-maybe-negative: -4.5rem;
+	--padding-massive-negative: -6.125rem;
+
 	/* blur */
 	--blur-small: 0.25rem;
 	--blur-mid: 0.5rem;
@@ -219,21 +232,17 @@ p {
 	text-align: justify;
 }
 
-b {
-	color: var(--light-green);
-}
-
 /* animations on load */
 
 .center-text,
-img {
+.container img {
 	color: white;
 	font-size: var(--large);
 	width: 40%;
 	translate: 0 -3rem;
 }
 
-img,
+.container img,
 .center-text,
 .center-text p {
 	transition: all 1.2s;
@@ -249,12 +258,22 @@ img,
 	text-shadow: -5px 3px var(--shadow-color);
 }
 
-img {
+.container img {
 	transition-delay: 1s;
 	@starting-style {
 		opacity: 0;
 		translate: 50dvh 0;
 	}
+}
+
+.center-text {
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.397),
+		rgba(0, 0, 0, 0)
+	);
+	padding: var(--padding-mid);
+	border-radius: var(--rounded);
+	backdrop-filter: blur(8px);
 }
 
 .container {
@@ -269,6 +288,7 @@ img {
 	font-size: var(--padding-normal);
 	width: 100%;
 	text-align: justify;
+	text-shadow: -3px 2px var(--shadow-color);
 }
 
 img {
@@ -323,14 +343,38 @@ button::after {
 	background-image: linear-gradient(var(--accent), var(--primary));
 }
 
+/* scroll anim */
+
+.scroll {
+	transform: translateX(-100%);
+}
+
+.scroll-right {
+	transform: translateX(100%);
+}
+
+.scroll.show,
+.scroll-right.show {
+	transform: translate(var(--tiny), 0);
+}
+
+.hide {
+	position: absolute;
+}
+
+.show {
+	position: static;
+}
+
 /* next section */
 
-.title-hold {
-	text-align: center;
+.section-hold {
 	padding: var(--padding-large);
-	font-family: "Avigea";
-	font-style: italic;
 	letter-spacing: 2px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 section {
@@ -338,7 +382,17 @@ section {
 	height: 100dvh;
 }
 
-.title.montserrat-bold-italic {
-	width: 50%;
-	text-shadow: 0 7px #fbc1fb;
+dt.title {
+	text-shadow: 0 7px #fbc1fb9a;
+	transition: all 0.8s ease;
+}
+
+.text {
+	color: white;
+	text-align: justify;
+}
+
+.section-hold dl {
+	width: 40%;
+	transform: translateY(var(--padding-mid-negative));
 }

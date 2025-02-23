@@ -468,3 +468,27 @@
 	font-weight: 900;
 	font-style: italic;
 }
+
+.avigea-regular {
+	font-family: "Avigea", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.avigea-bold {
+	font-family: "Avigea", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.avigea-regular-italic {
+	font-family: "Avigea", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.avigea-bold-italic {
+	font-family: "Avigea", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
