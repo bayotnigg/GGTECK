@@ -358,6 +358,7 @@ button::after {
 
 .padding {
 	padding: 0 var(--padding-maybe);
+	overflow: hidden;
 }
 
 .background {
