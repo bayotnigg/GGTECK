@@ -1,0 +1,14 @@
+p {
+	text-align: justify;
+	width: 40%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}

@@ -281,6 +281,17 @@ p {
 		rgba(255, 255, 255, 0.397),
 		rgba(0, 0, 0, 0)
 	);
+}
+
+dl {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0),
+		rgba(255, 255, 255, 0.397)
+	);
+}
+
+.center-text,
+dl {
 	padding: var(--padding-mid);
 	border-radius: var(--rounded);
 	backdrop-filter: blur(8px);
@@ -332,7 +343,6 @@ button::after {
 	height: 100%;
 	width: 100%;
 	border-radius: var(--mid-rounded);
-	box-shadow: -10px 10px rgba(0, 0, 0, 0.1);
 	translate: -5.85rem -3.45rem;
 	padding: var(--padding-small);
 	background-image: conic-gradient(
@@ -342,6 +352,7 @@ button::after {
 		var(--color-first)
 	);
 	animation: 3s spin linear infinite;
+	box-shadow: -10px 10px rgba(0, 0, 0, 0.1);
 	z-index: -1;
 }
 
@@ -360,12 +371,9 @@ button::after {
 	opacity: 0;
 }
 
-dd.text.scroll {
-	transform: translateX(-50vw);
-}
-
 .scroll-right {
 	transform: translateX(100%);
+	opacity: 0;
 }
 
 .scroll.show,
@@ -391,22 +399,30 @@ dd.text.scroll.show {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+.section-hold img {
+	transition: all 0.8s ease;
 }
 
 section {
-	background-image: linear-gradient(var(--primary), var(--light-green));
+	background-image: linear-gradient(var(--primary), rgb(252, 186, 64));
 	height: 100dvh;
 }
 
 dt.title {
 	text-shadow: 0 7px #fbc1fb9a;
 	transition: all 0.8s ease;
+	text-align: end;
 }
 
 dd.text {
 	transition: all 0.8s ease;
 	transition-delay: 0.2s;
+	-moz-text-align-last: right;
+	text-align-last: right;
 }
 
 .text {
@@ -421,4 +437,35 @@ dd.text {
 
 u {
 	text-decoration: underline 3px var(--aqua);
+}
+
+.img-contain {
+	transition: all 0.8s ease;
+}
+
+.img-contain video {
+	border-radius: var(--rounded);
+	transition: all 0.8s ease;
+}
+
+.img-contain video:hover {
+	translate: 15px -15px;
+	box-shadow: -15px 15px var(--shadow-color);
+}
+
+.img-contain p {
+	width: 100%;
+	color: white;
+	text-align: center;
+	text-shadow: -2px 2px var(--navy-blue);
+}
+
+dd button::after {
+	translate: -4.2rem -3.8rem;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+dd button {
+	letter-spacing: 3px;
+	font-size: var(--mid);
 }

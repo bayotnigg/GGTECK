@@ -492,3 +492,17 @@
 	font-weight: 700;
 	font-style: italic;
 }
+
+.newake {
+	font-family: "Newake", sans-serif;
+}
+
+.newake-italic {
+	font-family: "Newake", sans-serif;
+	font-style: italic;
+}
+
+.ranille {
+	font-family: "Ranille", sans-serif;
+	font-style: italic;
+}
