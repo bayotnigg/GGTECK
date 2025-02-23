@@ -241,7 +241,7 @@ p {
 	color: white;
 	font-size: var(--large);
 	width: 40%;
-	translate: 0 -3rem;
+	translate: 0 -2rem;
 }
 
 .container img,
@@ -314,7 +314,6 @@ dl {
 }
 
 img {
-	width: 10rem;
 	border-radius: var(--rounded);
 }
 
