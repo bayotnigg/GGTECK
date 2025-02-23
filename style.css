@@ -259,11 +259,20 @@ p {
 }
 
 .container img {
-	transition-delay: 1s;
 	@starting-style {
 		opacity: 0;
 		translate: 50dvh 0;
 	}
+
+	transition: transform 0.8s ease, box-shadow 0.8s ease, translate 1.2s 1s ease,
+		opacity 1.2s 1s ease;
+	box-shadow: 5px 5px var(--blur-color);
+}
+
+.container img:hover {
+	transform: translate(-15px, -15px);
+
+	box-shadow: 15px 15px var(--blur-color);
 }
 
 .center-text {
@@ -347,6 +356,11 @@ button::after {
 
 .scroll {
 	transform: translateX(-100%);
+	opacity: 0;
+}
+
+dd.text.scroll {
+	transform: translateX(-50vw);
 }
 
 .scroll-right {
@@ -354,8 +368,10 @@ button::after {
 }
 
 .scroll.show,
-.scroll-right.show {
-	transform: translate(var(--tiny), 0);
+.scroll-right.show,
+dd.text.scroll.show {
+	transform: translate(0);
+	opacity: 1;
 }
 
 .hide {
@@ -385,6 +401,11 @@ section {
 dt.title {
 	text-shadow: 0 7px #fbc1fb9a;
 	transition: all 0.8s ease;
+}
+
+dd.text {
+	transition: all 0.8s ease;
+	transition-delay: 0.2s;
 }
 
 .text {
