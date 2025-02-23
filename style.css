@@ -15,6 +15,7 @@
 	--blur-color: #9c9c9c;
 	--shadow-color: #108cdf6c;
 	--shadow-color-original: #108cdf;
+	--text-color: rgb(255, 255, 255);
 
 	/* font sizes */
 	--tiny: 0.1rem;
@@ -409,11 +410,15 @@ dd.text {
 }
 
 .text {
-	color: white;
+	color: var(--text-color);
 	text-align: justify;
 }
 
 .section-hold dl {
 	width: 40%;
 	transform: translateY(var(--padding-mid-negative));
+}
+
+u {
+	text-decoration: underline 3px var(--aqua);
 }
