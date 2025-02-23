@@ -9,6 +9,7 @@
 	--aqua: #a5e8f6;
 	--accent: #8ecaf1;
 	--dark-blue: hsl(180, 95%, 49%);
+	--dark-blue-original: rgb(23, 101, 204);
 	--navy-blue: #08267d;
 	--beige: #f4bf90;
 	--skin-color: #f9ad81;
@@ -337,7 +338,8 @@ button:hover {
 	transform: translateY(-5px);
 }
 
-button::after {
+button::after,
+button::before {
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -354,6 +356,11 @@ button::after {
 	animation: 3s spin linear infinite;
 	box-shadow: -10px 10px rgba(0, 0, 0, 0.1);
 	z-index: -1;
+}
+
+button::before {
+	translate: -6.3rem -0.9rem;
+	padding: var(--padding-normal);
 }
 
 .padding {
@@ -424,7 +431,7 @@ dd.text {
 	transition-delay: 0.2s;
 	-moz-text-align-last: right;
 	text-align-last: right;
-	text-shadow: 0 2px #fbc1fb9a;
+	text-shadow: 0 3px #fbc1fbf3;
 }
 
 .img-contain p {
@@ -471,6 +478,10 @@ dd button::after {
 	box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+dd button::before {
+	translate: -4.65rem -0.95rem;
+}
+
 dd button {
 	letter-spacing: 3px;
 	font-size: var(--mid);
@@ -478,4 +489,9 @@ dd button {
 
 dd b {
 	letter-spacing: 2px;
+}
+
+dd a {
+	color: var(--dark-blue-original);
+	text-decoration: underline 3px var(--dark-blue-original);
 }
