@@ -13,6 +13,7 @@
 	--navy-blue: #08267d;
 	--beige: #f4bf90;
 	--skin-color: #f9ad81;
+	--orange: rgb(252, 186, 64);
 	--blur-color: #9c9c9c;
 	--shadow-color: #108cdf6c;
 	--shadow-color-original: #108cdf;
@@ -137,7 +138,8 @@ html {
 }
 
 body {
-	background-image: linear-gradient(var(--accent), var(--primary));
+	background-color: var(--accent);
+	overflow-x: hidden;
 }
 
 /* body */
@@ -406,7 +408,7 @@ dd.text.scroll.show {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .section-hold img {
@@ -414,7 +416,7 @@ dd.text.scroll.show {
 }
 
 #next-page {
-	background-image: linear-gradient(var(--primary), rgb(252, 186, 64));
+	background-image: linear-gradient(var(--primary), var(--orange));
 	height: 100dvh;
 }
 
@@ -488,4 +490,84 @@ dd b {
 dd a {
 	color: var(--dark-blue-original);
 	text-decoration: underline 3px var(--dark-blue-original);
+}
+
+#chemistry {
+	background-image: linear-gradient(var(--orange), var(--light-green));
+	height: 100dvh;
+}
+
+#chemistry .title {
+	text-align: left;
+	text-shadow: 0 5px rgb(252, 186, 64);
+}
+
+#chemistry .text {
+	-moz-text-align-last: left;
+	text-align-last: left;
+	text-shadow: 0 3px rgb(252, 186, 64);
+}
+
+.background-flip {
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.397),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+#chemistry .img-contain video {
+	border-radius: var(--rounded);
+	transition: all 0.8s ease;
+}
+
+#chemistry .img-contain video:hover {
+	translate: -15px -15px;
+	box-shadow: 15px 15px var(--shadow-color);
+}
+
+#physics {
+	height: 100dvh;
+	background-image: linear-gradient(var(--light-green), var(--accent));
+}
+
+#physics dd button::after {
+	translate: -6.2rem -3.8rem;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#physics dd button::before {
+	translate: -6.2rem -0.95rem;
+}
+
+footer {
+	height: 30%;
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0),
+		rgb(0, 0, 0),
+		rgb(0, 0, 0),
+		rgb(0, 0, 0),
+		rgb(0, 0, 0)
+	);
+	padding: 4rem;
+	padding-top: 8rem;
+}
+
+.text-body {
+	color: white;
+	padding-top: 1rem;
+	font-size: 1rem;
+}
+
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: end;
+	height: 100%;
+	text-decoration: underline rgb(125, 160, 255) 3px;
+	flex-wrap: wrap;
+}
+
+.kneesurgery {
+	width: 150px;
 }

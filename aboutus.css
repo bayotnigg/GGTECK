@@ -11,4 +11,15 @@ p {
 html,
 body {
 	scroll-behavior: smooth;
+	background: linear-gradient(to right, lightblue, pink);
+}
+
+h1 {
+	text-align: center;
+}
+
+.alignment {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
