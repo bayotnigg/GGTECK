@@ -413,7 +413,7 @@ dd.text.scroll.show {
 	transition: all 0.8s ease;
 }
 
-section {
+#next-page {
 	background-image: linear-gradient(var(--primary), rgb(252, 186, 64));
 	height: 100dvh;
 }
@@ -473,17 +473,12 @@ u {
 }
 
 dd button::after {
-	translate: -4.2rem -3.8rem;
+	translate: -3.7rem -3.8rem;
 	box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 dd button::before {
-	translate: -4.65rem -0.95rem;
-}
-
-dd button {
-	letter-spacing: 3px;
-	font-size: var(--mid);
+	translate: -4rem -0.95rem;
 }
 
 dd b {
