@@ -1,3 +1,102 @@
+/* roots */
+:root {
+	/* colors */
+	--light-green: #a9f04c;
+	--dark-green: #82bd35;
+	--pink: #f6a2f6;
+	--light-pink: #fbc1fb;
+	--primary: #f383da;
+	--aqua: #a5e8f6;
+	--accent: #8ecaf1;
+	--dark-blue: hsl(180, 95%, 49%);
+	--dark-blue-original: rgb(23, 101, 204);
+	--navy-blue: #08267d;
+	--beige: #f4bf90;
+	--skin-color: #f9ad81;
+	--orange: rgb(252, 186, 64);
+	--blur-color: #9c9c9c;
+	--shadow-color: #108cdf6c;
+	--shadow-color-original: #108cdf;
+	--text-color: rgb(255, 255, 255);
+
+	/* font sizes */
+	--tiny: 0.1rem;
+	--extra-small: 0.5rem;
+	--small: 1rem;
+	--mid: 1.25rem;
+	--medium: 1.5rem;
+	--large: 2rem;
+	--title: 3rem;
+
+	/* border-radius sizes */
+	--smal-rounded: 0.5rem;
+	--rounded: 1rem;
+	--mid-rounded: 1.5rem;
+	--extra-rounded: 2rem;
+	--circle: 50%;
+
+	/* common padding sizes */
+	--padding-small: 0.5rem;
+	--padding-regular: 0.75rem;
+	--padding-normal: 0.95rem;
+	--padding: 1rem;
+	--padding-mid: 1.25rem;
+	--padding-medium: 1.5rem;
+	--padding-semilarge: 2rem;
+	--padding-large: 3.45rem;
+	--padding-maybe: 4.5rem;
+	--padding-massive: 6.125rem;
+
+	/* negative paddings */
+
+	--padding-small-negative: -0.5rem;
+	--padding-regular-negative: -0.75rem;
+	--padding-normal-negative: -0.95rem;
+	--padding-negative: -1rem;
+	--padding-mid-negative: -1.25rem;
+	--padding-medium-negative: -1.5rem;
+	--padding-semilarge-negative: -2rem;
+	--padding-large-negative: -3.45rem;
+	--padding-maybe-negative: -4.5rem;
+	--padding-massive-negative: -6.125rem;
+
+	/* blur */
+	--blur-small: 0.25rem;
+	--blur-mid: 0.5rem;
+	--blur-big: 1rem;
+
+	/* opacity */
+	--transparent-ish: 10%;
+	--translucent-ish: 25%;
+	--translucent: 50%;
+	--opaque-ish: 75%;
+	--opaque: 100%;
+
+	/* global percentages */
+	--min: 0%;
+	--ten: 10%;
+	--quarter: 25%;
+	--thirty: 35%;
+	--half: 50%;
+	--sixty: 60%;
+	--third: 75%;
+	--eighty: 85%;
+	--max: 100%;
+
+	/* test attr */
+	--font-small: 1rem;
+	--font-mid-small: 1.5rem;
+	--font-mid: 2rem;
+	--font-big: 3rem;
+	--padding-size: 1rem;
+	--padding-size-small: 0.8rem;
+	--padding-size-reserve: 0.3125rem;
+	--negative-var: -0.3125rem;
+	--color-first: rgb(139, 139, 212);
+	--angle: 0deg;
+	--black-gradient: rgba(0, 0, 0, 0.2);
+}
+
 p {
 	text-align: justify;
 	width: 40%;
@@ -16,10 +115,81 @@ body {
 
 h1 {
 	text-align: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.intro p {
+	margin-bottom: 1rem;
+}
+
+h3 {
+	width: 100%;
+	text-align: center;
 }
 
 .alignment {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+}
+
+.avigea-bold {
+	letter-spacing: 3px;
+}
+
+h3 p {
+	letter-spacing: normal;
+}
+
+a:hover,
+header > h1:hover {
+	transform: translateY(-0.5rem);
+}
+
+/* body */
+/* navbar */
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--padding-medium) var(--padding-massive);
+	align-items: center;
+	color: var(--dark-blue);
+	isolation: isolate;
+}
+
+header > h1 {
+	transition: all 1.2s;
+	transition-delay: 0.6s;
+	@starting-style {
+		translate: 0 -5rem;
+	}
+}
+
+.header-background {
+	background-image: linear-gradient(rgba(144, 209, 24, 0.452), #ffffff00);
+	width: 100%;
+	position: absolute;
+	height: 20%;
+}
+
+header a {
+	font-size: var(--mid);
+	color: white;
+	text-decoration: underline 4px;
+	transition: all 0.2s;
+	width: max-content;
+}
+
+header h1 {
+	font-size: var(--large);
+}
+
+header a,
+header h1 {
+	text-shadow: -3px 3px var(--shadow-color);
+}
+
+header a:active {
+	color: var(--light-pink);
 }
